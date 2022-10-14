@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 export const MovieBox = styled.div`
+  padding-top: 20px;
   padding-bottom: 5px;
   display: flex;
   gap: 20px;

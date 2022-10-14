@@ -15,3 +15,8 @@ export const fetchMovieById = id => {
     `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
   ).then(response => response.json());
 };
+export const fetchCastById = id => {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}&language=en-US`
+  ).then(response => response.json());
+};
