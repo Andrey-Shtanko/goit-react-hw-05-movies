@@ -26,15 +26,14 @@ export const MovieDetails = () => {
     fetchMovie();
   }, [movieId]);
   return (
-    <>
+    <div>
       <BackButton>
         <BiArrowBack />
         Go back
       </BackButton>
       {isLoading && <div>...Loading</div>}
       {movieData && <MovieInfo data={movieData} />}
-
       <Outlet />
-    </>
+    </div>
   );
 };
