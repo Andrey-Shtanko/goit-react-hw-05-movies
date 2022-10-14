@@ -1,7 +1,8 @@
 import { fetchMoviesByQuery } from 'ApiServices/movieApi';
 import { useState } from 'react';
+
 import { MovieList } from './../../components/MovieList/MovieList';
-export const Movie = () => {
+export const Movies = () => {
   const [query, setQuery] = useState('');
   const [moviesData, setMoviesData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

@@ -6,7 +6,7 @@ export const AppBar = () => {
       <NavItem to="/" end>
         Home
       </NavItem>
-      <NavItem to="movie">Movie</NavItem>
+      <NavItem to="movies">Movies</NavItem>
     </BarWrapper>
   );
 };
