@@ -1,6 +1,7 @@
 import { fetchCastById } from 'ApiServices/movieApi';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ActorItem, ActorsList } from './Cast.styled';
 export const Cast = () => {
   const [actors, setActors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,18 +28,18 @@ export const Cast = () => {
     <div>
       {isLoading && <div>...is Loading</div>}
       {actors && (
-        <ul>
+        <ActorsList>
           {actors.map(actor => {
             const actorPhoto = `https://image.tmdb.org/t/p/w200${actor.profile_path}`;
             return (
-              <li key={actor.name}>
+              <ActorItem key={actor.name}>
                 <img src={actorPhoto} width="100" alt="" />
-                <p>name:{actor.name}</p>
-                <p>Character:{actor.character}</p>
-              </li>
+                <p>{actor.name}</p>
+                <p>Character: {actor.character}</p>
+              </ActorItem>
             );
           })}
-        </ul>
+        </ActorsList>
       )}
     </div>
   );
