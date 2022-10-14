@@ -2,7 +2,7 @@ import { MovieList } from 'components/MovieList/MovieList';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { HomeTitle, HomeWrapper } from './Home.styled';
-import { fetchMovies } from './../../ApiServices/movieApi';
+import { fetchTrandingMovies } from './../../ApiServices/movieApi';
 export const Home = () => {
   const [moviesData, setMoviesData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -11,9 +11,8 @@ export const Home = () => {
     async function fetchData() {
       try {
         setIsLoading(true);
-        const { results } = await fetchMovies();
+        const { results } = await fetchTrandingMovies();
         setMoviesData(results);
-        console.log(results);
       } catch (error) {
         console.log(error);
         return alert(`Sorry, please try again`);

@@ -1,14 +1,5 @@
-import { BarWrapper } from './AppBar.styled';
-import { NavLink } from 'react-router-dom';
-import styled from '@emotion/styled';
+import { BarWrapper, NavItem } from './AppBar.styled';
 
-const NavItem = styled(NavLink)`
-  text-decoration: none;
-  color: black;
-  &.active {
-    color: red;
-  }
-`;
 export const AppBar = () => {
   return (
     <BarWrapper>
