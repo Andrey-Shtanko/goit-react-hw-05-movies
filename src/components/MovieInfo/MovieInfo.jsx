@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { InfoBox, MovieBox, AdditionalBox } from './MovieInfo.styled';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 
 export const MovieInfo = ({ data }) => {
+  const location = useLocation();
+
   const { movieId } = useParams();
   const { poster_path, original_title, vote_average, overview, genres } = data;
   const genresNames = genres.map(genre => genre.name).join(` `);
@@ -26,10 +28,20 @@ export const MovieInfo = ({ data }) => {
         Additional information
         <ul>
           <li>
-            <Link to={`/movies/${movieId}/cast`}>Cast</Link>
+            <Link
+              to={`/movies/${movieId}/cast`}
+              state={{ from: location.state.from }}
+            >
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+            <Link
+              to={`/movies/${movieId}/reviews`}
+              state={{ from: location.state.from }}
+            >
+              Reviews
+            </Link>
           </li>
         </ul>
       </AdditionalBox>

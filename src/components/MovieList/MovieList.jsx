@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { MoviesList } from './MovieList.styled';
 export const MovieList = ({ moviesData }) => {
   const location = useLocation();
+
   return (
     <MoviesList>
       {moviesData.map(movie => (

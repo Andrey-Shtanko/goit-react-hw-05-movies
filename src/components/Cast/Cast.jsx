@@ -26,12 +26,12 @@ export const Cast = () => {
   return (
     <div>
       {isLoading && <div>...is Loading</div>}
-      {actors && (
+      {actors ? (
         <ActorsList>
           {actors.map(actor => {
             const actorPhoto = `https://image.tmdb.org/t/p/w200${actor.profile_path}`;
             return (
-              <ActorItem key={actor.name}>
+              <ActorItem key={actor.id}>
                 <img src={actorPhoto} width="100" alt="" />
                 <p>{actor.name}</p>
                 <p>Character: {actor.character}</p>
@@ -39,6 +39,8 @@ export const Cast = () => {
             );
           })}
         </ActorsList>
+      ) : (
+        <p>We don't have any cast for this movie.</p>
       )}
     </div>
   );
