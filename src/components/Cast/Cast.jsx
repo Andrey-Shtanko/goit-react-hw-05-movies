@@ -13,7 +13,6 @@ export const Cast = () => {
         setIsLoading(true);
         const { cast } = await fetchCastById(movieId);
         setActors(cast);
-        console.log(cast);
       } catch (error) {
         console.log(error);
         return alert(`Sorry, please try again`);

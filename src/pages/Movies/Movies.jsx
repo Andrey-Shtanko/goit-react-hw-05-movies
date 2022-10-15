@@ -14,7 +14,6 @@ export const Movies = () => {
       setIsLoading(true);
       const { results } = await fetchMoviesByQuery(query);
       setMoviesData(results);
-      console.log(results);
     } catch (error) {
       console.log(error);
       return alert(`Sorry, please try again`);
@@ -25,7 +24,6 @@ export const Movies = () => {
   const onHandleSubmit = event => {
     event.preventDefault();
     fetchByQuery();
-    console.log(`ready to fetch ${query}`);
     setQuery('');
   };
   return (

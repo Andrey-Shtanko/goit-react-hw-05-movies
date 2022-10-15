@@ -1,4 +1,4 @@
-import { InfoBox, MovieBox } from './MovieInfo.styled';
+import { InfoBox, MovieBox, AdditionalBox } from './MovieInfo.styled';
 import { useParams, Link } from 'react-router-dom';
 
 export const MovieInfo = ({ data }) => {
@@ -20,7 +20,7 @@ export const MovieInfo = ({ data }) => {
           <p>{genresNames}</p>
         </InfoBox>
       </MovieBox>
-      <div>
+      <AdditionalBox>
         Additional information
         <ul>
           <li>
@@ -30,7 +30,7 @@ export const MovieInfo = ({ data }) => {
             <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
           </li>
         </ul>
-      </div>
+      </AdditionalBox>
     </>
   );
 };

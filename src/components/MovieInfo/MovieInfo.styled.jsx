@@ -11,3 +11,6 @@ export const InfoBox = styled.div`
   flex-direction: column;
   gap: 15px;
 `;
+export const AdditionalBox = styled.div`
+  border-bottom: 1px solid #000;
+`;
