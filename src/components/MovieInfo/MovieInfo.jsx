@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { InfoBox, MovieBox, AdditionalBox } from './MovieInfo.styled';
 import { useParams, Link } from 'react-router-dom';
 
@@ -7,6 +8,7 @@ export const MovieInfo = ({ data }) => {
   const genresNames = genres.map(genre => genre.name).join(` `);
   const posterUrl = `https://image.tmdb.org/t/p/w200${poster_path}`;
   const rating = vote_average.toFixed(1) * 10;
+
   return (
     <>
       <MovieBox>
@@ -33,4 +35,18 @@ export const MovieInfo = ({ data }) => {
       </AdditionalBox>
     </>
   );
+};
+
+MovieInfo.propTypes = {
+  data: PropTypes.shape({
+    poster_path: PropTypes.string.isRequired,
+    original_title: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    overview: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+      })
+    ),
+  }),
 };
