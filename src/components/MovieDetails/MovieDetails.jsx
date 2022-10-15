@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { BackButton } from './MovieDetails.styled';
 import { fetchMovieById } from './../../ApiServices/movieApi';
 import { MovieInfo } from './../MovieInfo/MovieInfo';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movieData, setMovieData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -34,7 +34,11 @@ export const MovieDetails = () => {
       </BackButton>
       {isLoading && <div>...Loading</div>}
       {movieData && <MovieInfo data={movieData} />}
-      <Outlet />
+      <Suspense fallback={<div>...Loading</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
+
+export default MovieDetails;

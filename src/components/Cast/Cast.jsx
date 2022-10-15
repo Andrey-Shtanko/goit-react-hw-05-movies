@@ -2,7 +2,7 @@ import { fetchCastById } from 'ApiServices/movieApi';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ActorItem, ActorsList } from './Cast.styled';
-export const Cast = () => {
+const Cast = () => {
   const [actors, setActors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -45,3 +45,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;

@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 
 import { MovieList } from './../../components/MovieList/MovieList';
 
-export const Movies = () => {
+const Movies = () => {
   const [query, setQuery] = useState('');
   const [moviesData, setMoviesData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -50,3 +50,5 @@ export const Movies = () => {
     </div>
   );
 };
+
+export default Movies;

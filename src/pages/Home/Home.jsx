@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { HomeTitle, HomeWrapper } from './Home.styled';
 import { fetchTrandingMovies } from './../../ApiServices/movieApi';
-export const Home = () => {
+const Home = () => {
   const [moviesData, setMoviesData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -31,3 +31,5 @@ export const Home = () => {
     </HomeWrapper>
   );
 };
+
+export default Home;
