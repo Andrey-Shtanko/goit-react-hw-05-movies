@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { BackButton } from './MovieDetails.styled';
 import { fetchMovieById } from './../../ApiServices/movieApi';
 import { MovieInfo } from './../MovieInfo/MovieInfo';
@@ -9,6 +9,7 @@ export const MovieDetails = () => {
   const [movieData, setMovieData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
+  const location = useLocation();
 
   useEffect(() => {
     async function fetchMovie() {
@@ -27,7 +28,7 @@ export const MovieDetails = () => {
   }, [movieId]);
   return (
     <div>
-      <BackButton>
+      <BackButton to={location.state.from}>
         <BiArrowBack />
         Go back
       </BackButton>

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-export const BackButton = styled.button`
+import { Link } from 'react-router-dom';
+export const BackButton = styled(Link)`
   margin-left: 10px;
   display: flex;
   justify-content: center;
