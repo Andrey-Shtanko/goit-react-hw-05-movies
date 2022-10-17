@@ -2,8 +2,8 @@ import { useState, useEffect, Suspense } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { BackButton } from './MovieDetails.styled';
-import { fetchMovieById } from './../../ApiServices/movieApi';
-import { MovieInfo } from './../MovieInfo/MovieInfo';
+import { fetchMovieById } from '../../ApiServices/movieApi';
+import { MovieInfo } from '../../components/MovieInfo/MovieInfo';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState(null);
