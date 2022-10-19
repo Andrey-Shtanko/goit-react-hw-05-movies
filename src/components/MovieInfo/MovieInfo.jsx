@@ -30,7 +30,7 @@ export const MovieInfo = ({ data }) => {
           <li>
             <Link
               to={`/movies/${movieId}/cast`}
-              state={{ from: location.state.from }}
+              state={{ from: location.state?.from?? '/' }}
             >
               Cast
             </Link>
@@ -38,7 +38,7 @@ export const MovieInfo = ({ data }) => {
           <li>
             <Link
               to={`/movies/${movieId}/reviews`}
-              state={{ from: location.state.from }}
+              state={{ from: location.state?.from?? '/' }}
             >
               Reviews
             </Link>
