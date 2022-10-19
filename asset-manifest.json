@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.626ae7cd.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.a6f5d5b7.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.fb1b1749.js",
     "static/js/278.4bc2aa2c.chunk.js": "/goit-react-hw-05-movies/static/js/278.4bc2aa2c.chunk.js",
     "static/js/485.caf165e6.chunk.js": "/goit-react-hw-05-movies/static/js/485.caf165e6.chunk.js",
-    "static/js/83.e882a651.chunk.js": "/goit-react-hw-05-movies/static/js/83.e882a651.chunk.js",
+    "static/js/83.bc69980d.chunk.js": "/goit-react-hw-05-movies/static/js/83.bc69980d.chunk.js",
     "static/js/736.60945d68.chunk.js": "/goit-react-hw-05-movies/static/js/736.60945d68.chunk.js",
     "static/js/387.ddd8de50.chunk.js": "/goit-react-hw-05-movies/static/js/387.ddd8de50.chunk.js",
     "static/js/481.5f9956d7.chunk.js": "/goit-react-hw-05-movies/static/js/481.5f9956d7.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.626ae7cd.css.map": "/goit-react-hw-05-movies/static/css/main.626ae7cd.css.map",
-    "main.a6f5d5b7.js.map": "/goit-react-hw-05-movies/static/js/main.a6f5d5b7.js.map",
+    "main.fb1b1749.js.map": "/goit-react-hw-05-movies/static/js/main.fb1b1749.js.map",
     "278.4bc2aa2c.chunk.js.map": "/goit-react-hw-05-movies/static/js/278.4bc2aa2c.chunk.js.map",
     "485.caf165e6.chunk.js.map": "/goit-react-hw-05-movies/static/js/485.caf165e6.chunk.js.map",
-    "83.e882a651.chunk.js.map": "/goit-react-hw-05-movies/static/js/83.e882a651.chunk.js.map",
+    "83.bc69980d.chunk.js.map": "/goit-react-hw-05-movies/static/js/83.bc69980d.chunk.js.map",
     "736.60945d68.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.60945d68.chunk.js.map",
     "387.ddd8de50.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.ddd8de50.chunk.js.map",
     "481.5f9956d7.chunk.js.map": "/goit-react-hw-05-movies/static/js/481.5f9956d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.626ae7cd.css",
-    "static/js/main.a6f5d5b7.js"
+    "static/js/main.fb1b1749.js"
   ]
 }
